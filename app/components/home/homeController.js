@@ -21,7 +21,7 @@
 
             //properties
             vm.APIHost = APIHOST;
-            vm.CurrentTemp = "";
+            vm.CurrentTemp = "Fetching..";
             vm.CurrentTime = "";
 
             // get our hero text
@@ -38,7 +38,7 @@
                 vm.CurrentTime = asyncService.retrievedData[0].ReadingTime;
 
 
-            }, 2000);
+            }, 1000);
 
 
             function reloadPage() {
