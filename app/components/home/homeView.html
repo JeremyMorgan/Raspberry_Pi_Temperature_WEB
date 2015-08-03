@@ -1,0 +1,12 @@
+<div class="row clearfix">
+    <div class="col-md-2 column">
+    </div>
+    <div class="col-md-8 column text-center weatherbackground">
+        <h1>Current Temperature in my Bedroom</h1>
+        <span class="temperature">{{ctrl.CurrentTemp | number:2}}</span>
+        <p class="fahrenheit">Fahrenheit</p>
+        <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>
+    </div>
+    <div class="col-md-2 column">
+    </div>
+</div>
