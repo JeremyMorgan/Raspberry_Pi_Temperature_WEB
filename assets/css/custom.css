@@ -7,7 +7,7 @@
     font-size: 200%;
 }
 body {
-    background: url('https://jeremymorgan.github.io/Raspberry_Pi_Temperature_WEB/assets/img/beach-background.jpg') no-repeat center center fixed;
+    background: url('http://jeremymorgan.github.io/Raspberry_Pi_Temperature_WEB/assets/img/beach-background.jpg') no-repeat center center fixed;
 }
 .weatherbackground {
     color: white;
