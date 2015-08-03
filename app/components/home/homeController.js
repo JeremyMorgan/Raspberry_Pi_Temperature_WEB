@@ -27,7 +27,6 @@
             // get our hero text
             asyncService.getHeroText(APIHOST);
 
-
             $timeout( function() {
                 console.log("Here");
                 console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
@@ -38,7 +37,7 @@
                 vm.CurrentTime = asyncService.retrievedData[0].ReadingTime;
 
 
-            }, 1000);
+            }, 500);
 
 
             function reloadPage() {
