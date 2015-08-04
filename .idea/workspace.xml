@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bda414fb-e5a8-404c-a600-510cc37f7776" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/custom.css" afterPath="$PROJECT_DIR$/assets/css/custom.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/homeController.js" afterPath="$PROJECT_DIR$/app/components/home/homeController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/homeServices.js" afterPath="$PROJECT_DIR$/app/components/home/homeServices.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/home/homeView.html" afterPath="$PROJECT_DIR$/app/components/home/homeView.html" />
     </list>
     <ignored path="Raspberry_Pi_Temperature_WEB.iws" />
@@ -40,17 +38,17 @@
         <entry file="file://$PROJECT_DIR$/app/components/home/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+              <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeServices.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homeServices.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/components/home/homeServices.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78205127">
-              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -66,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeView.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homeView.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/components/home/homeView.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.08603239">
+              <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -98,9 +96,9 @@
         <option value="$PROJECT_DIR$/app/app.modules.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
-        <option value="$PROJECT_DIR$/app/components/home/homeView.html" />
-        <option value="$PROJECT_DIR$/app/components/home/homeController.js" />
         <option value="$PROJECT_DIR$/app/components/home/homeServices.js" />
+        <option value="$PROJECT_DIR$/app/components/home/homeController.js" />
+        <option value="$PROJECT_DIR$/app/components/home/homeView.html" />
       </list>
     </option>
   </component>
@@ -433,14 +431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.modules.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/img/beach-background.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -462,26 +452,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/home/homeView.html">
+    <entry file="file://$PROJECT_DIR$/app/components/home/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="32" selection-start-line="62" selection-start-column="32" selection-end-line="62" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/home/homeController.js">
+    <entry file="file://$PROJECT_DIR$/app/app.modules.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="17" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="17" />
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/home/homeServices.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78205127">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="64" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/home/homeView.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08603239">
+          <caret line="5" column="82" selection-start-line="5" selection-start-column="82" selection-end-line="5" selection-end-column="82" />
           <folding />
         </state>
       </provider>

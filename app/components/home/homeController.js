@@ -25,6 +25,7 @@
             vm.CurrentTime = "";
             vm.HourAvg = "";
             vm.DayAvg = "";
+            vm.loaded = false;
 
 
             // get our hero text
@@ -36,7 +37,6 @@
                 //console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
                 //console.log("Showing: " + asyncService.retrievedData[0].ReadingTime);
                 //console.log("Showing: " + JSON.stringify(asyncService.lastHour));
-
 
                 vm.CurrentTemp = asyncService.retrievedData[0].ReadingTemp;
                 vm.CurrentTime = asyncService.retrievedData[0].ReadingTime;
@@ -59,6 +59,8 @@
 
                 vm.HourAvg = (hourtotal / 60);
                 vm.DayAvg = (daytotal / 1440);
+
+                vm.loaded = true;
 
             }, 1000);
 
