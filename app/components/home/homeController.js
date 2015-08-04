@@ -26,6 +26,8 @@
             vm.HourAvg = "";
             vm.DayAvg = "";
             vm.loaded = false;
+            vm.lastDayRaw = asyncService.lastDayRaw;
+
 
 
             // get our hero text
@@ -45,6 +47,9 @@
 
                 // calculate hour average
                 var hourtotal = 0;
+                var hourstart = asyncService.lastHour[0];
+                var hourend = asyncService.lastHour[59];
+
                 angular.forEach(asyncService.lastHour, function(key, value){
                     hourtotal = hourtotal + key;
                 }, asyncService.lastHour);
@@ -53,12 +58,33 @@
 
                 // calculate day average
                 var daytotal = 0;
+                var daystart = asyncService.lastDay[0];
+                var dayend = asyncService.lastDay[1339];
+
                 angular.forEach(asyncService.lastDay, function(key, value){
-                    daytotal = daytotal + key
+                    daytotal = daytotal + key;
                 }, asyncService.lastDay);
+
+                //console.log(daystart);
 
                 vm.HourAvg = (hourtotal / 60);
                 vm.DayAvg = (daytotal / 1440);
+
+                // if the start of the day was colder than now
+                if (hourstart > hourend){
+                    // getting colder
+                    console.log("Start " + hourstart + " is hotter than " + hourend + "Getting Colder");
+                    vm.hourcolder = true;
+                }else {
+                    // getting hotter
+                    vm.hourhotter = true;
+                }
+
+                if (daystart < dayend){
+                    vm.daycolder = true;
+                }else {
+                    vm.dayhotter = true;
+                }
 
                 vm.loaded = true;
 

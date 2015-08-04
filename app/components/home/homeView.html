@@ -20,16 +20,57 @@
         <span class="loader" ng-hide="ctrl.loaded">
             <img src="assets/img/loader.gif" />
         </span>
-        <span class="smalltemperature" ng-show="ctrl.loaded">{{ctrl.HourAvg | number:2}}</span>
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+            {{ctrl.HourAvg | number:2}}
+            <p>Trending:</p>
+            <div ng-show="ctrl.hourcolder">
+                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+            </div>
+            <div ng-show="ctrl.hourhotter">
+            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+            </div>
+
+        </span>
     </div>
     <div class="col-md-4 column text-center weatherbackground">
         <h2>Average 24 Hours:</h2>
         <span class="loader" ng-hide="ctrl.loaded">
             <img src="assets/img/loader.gif" />
         </span>
-        <span class="smalltemperature" ng-show="ctrl.loaded">{{ctrl.DayAvg | number:2}}</span>
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+
+            {{ctrl.DayAvg | number:2}}
+            <p>Trending:</p>
+            <div ng-show="ctrl.daycolder">
+                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+            </div>
+            <div ng-show="ctrl.dayhotter">
+                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+            </div>
+
+        </span>
     </div>
     </div>
     <div class="col-md-2 column">
     </div>
 </div>
+<!--{{ctrl.lastDayRaw}}
+<div id="chartContainer">
+    <script type="text/javascript">
+        var svg = dimple.newSvg("#chartContainer", 590, 400);
+        d3.tsv(ctrl.lastDayRaw, function (data) {
+            data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
+            var myChart = new dimple.chart(svg, data);
+            myChart.setBounds(60, 30, 505, 305);
+            var x = myChart.addCategoryAxis("x", "Month");
+            x.addOrderRule("Date");
+            myChart.addMeasureAxis("y", "Unit Sales");
+            var s = myChart.addSeries("Channel", dimple.plot.area);
+            s.interpolation = "cardinal";
+            myChart.addLegend(60, 10, 500, 20, "right");
+            myChart.draw();
+        });
+    </script>
+</div>-->
+
+

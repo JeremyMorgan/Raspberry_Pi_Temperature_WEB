@@ -3,8 +3,18 @@
     color: honeydew;
 }
 .smalltemperature{
-    font-size: 700%;
+    font-size: 400%;
     color: honeydew;
+}
+.smalltemperature p{
+    font-size: 50%;
+    color: honeydew;
+}
+.glyphicon-arrow-up{
+    color: red;
+}
+.glyphicon-arrow-down{
+    color: blue;
 }
 .fahrenheit {
     color: #1a242f;
