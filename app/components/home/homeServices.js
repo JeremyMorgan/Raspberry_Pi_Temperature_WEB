@@ -9,7 +9,11 @@
                 //properties
                 retrievedData: [],
                 preparedData: [],
-                getCurrentTemp : getCurrentTemp
+                lastHour: [],
+                lastDay: [],
+                getCurrentTemp : getCurrentTemp,
+                getLastHour : getLastHour,
+                getLastDay : getLastDay,
             };
 
             var sendRequest = {
@@ -33,6 +37,23 @@
                     //console.log(JSON.stringify(factory.retrievedData));
                 });
             }
+
+            function getLastHour(APIHOST) {
+                sendRequest.async('https://bedroomtemp.azurewebsites.net/api/reading?count=60&sortorder=DESC').then(function(d) {
+                    angular.forEach(d, function(key, value){
+                        factory.lastHour.push(key.ReadingTemp);
+                    }, d);
+                });
+            }
+
+            function getLastDay(APIHOST) {
+                sendRequest.async('https://bedroomtemp.azurewebsites.net/api/reading?count=1440&sortorder=DESC').then(function(d) {
+                    angular.forEach(d, function(key, value){
+                        factory.lastDay.push(key.ReadingTemp);
+                    }, d);
+                });
+            }
+
             return factory;
         }]);
 })();
