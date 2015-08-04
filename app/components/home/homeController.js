@@ -25,7 +25,7 @@
             vm.CurrentTime = "";
 
             // get our hero text
-            asyncService.getHeroText(APIHOST);
+            asyncService.getCurrentTemp(APIHOST);
 
             $timeout( function() {
                 console.log("Here");
