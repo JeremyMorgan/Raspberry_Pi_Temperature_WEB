@@ -1,3 +1,12 @@
+.maintemprow {
+    margin-top: 150px;
+}
+
+
+.smalltemprow {
+    margin-top: 10px;
+}
+
 .temperature{
     font-size: 1250%;
     color: honeydew;
@@ -5,9 +14,11 @@
 .smalltemperature{
     font-size: 400%;
     color: honeydew;
+
 }
 .smalltemperature p{
-    font-size: 50%;
+    margin-top:1px;
+    font-size: 40%;
     color: honeydew;
 }
 .glyphicon-arrow-up{
@@ -25,7 +36,7 @@ body {
 }
 .weatherbackground {
     color: white;
-    margin-top: 100px;
+
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     /* IE 5-7 */
     filter: alpha(opacity=50);

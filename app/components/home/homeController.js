@@ -70,20 +70,13 @@
                 vm.HourAvg = (hourtotal / 60);
                 vm.DayAvg = (daytotal / 1440);
 
-                // if the start of the day was colder than now
-                if (hourstart > hourend){
-                    // getting colder
-                    console.log("Start " + hourstart + " is hotter than " + hourend + "Getting Colder");
+
+                if (hourstart >= hourend){
+                    // trending colder
                     vm.hourcolder = true;
                 }else {
-                    // getting hotter
+                    // trending hotter
                     vm.hourhotter = true;
-                }
-
-                if (daystart < dayend){
-                    vm.daycolder = true;
-                }else {
-                    vm.dayhotter = true;
                 }
 
                 vm.loaded = true;

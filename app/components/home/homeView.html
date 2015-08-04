@@ -1,7 +1,7 @@
 <div class="row clearfix">
     <div class="col-md-2 column">
     </div>
-    <div class="col-md-8 column text-center weatherbackground">
+    <div class="col-md-8 column text-center weatherbackground maintemprow">
         <h1>Current Temperature in my Bedroom</h1>
         <span class="loader" ng-hide="ctrl.loaded"><img src="assets/img/loader.gif" /></span>
         <span class="temperature" ng-show="ctrl.loaded">{{ctrl.CurrentTemp | number:2}}</span>
@@ -12,42 +12,39 @@
     </div>
 </div>
 
-<div class="row clearfix">
+<div class="row clearfix smalltemprow">
     <div class="col-md-2 column">
     </div>
-    <div class="col-md-4 column text-center weatherbackground">
+    <div class="col-md-3 column text-center weatherbackground ">
     <h2>Average Last Hour:</h2>
         <span class="loader" ng-hide="ctrl.loaded">
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
             {{ctrl.HourAvg | number:2}}
-            <p>Trending:</p>
-            <div ng-show="ctrl.hourcolder">
-                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-            </div>
-            <div ng-show="ctrl.hourhotter">
-            <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-            </div>
-
         </span>
     </div>
-    <div class="col-md-4 column text-center weatherbackground">
+
+    <div class="col-md-2 column text-center weatherbackground " >
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+    <p>Trend:</p>
+    <div ng-show="ctrl.hourcolder">
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+        <p>Getting Colder</p>
+    </div>
+    <div ng-show="ctrl.hourhotter">
+        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+        <p>Getting Warmer</p>
+    </div>
+        </span>
+    </div>
+    <div class="col-md-3 column text-center weatherbackground ">
         <h2>Average 24 Hours:</h2>
         <span class="loader" ng-hide="ctrl.loaded">
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
-
             {{ctrl.DayAvg | number:2}}
-            <p>Trending:</p>
-            <div ng-show="ctrl.daycolder">
-                <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
-            </div>
-            <div ng-show="ctrl.dayhotter">
-                <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-            </div>
-
         </span>
     </div>
     </div>
