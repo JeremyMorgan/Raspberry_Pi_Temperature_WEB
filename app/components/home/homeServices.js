@@ -49,7 +49,7 @@
 
             function getLastDay(APIHOST) {
                 sendRequest.async('https://bedroomtemp.azurewebsites.net/api/reading?count=1440&sortorder=DESC').then(function(d) {
-                    factory.lastDayRaw.push(d);
+                    //factory.lastDayRaw.push(d);
                     angular.forEach(d, function(key, value){
                         factory.lastDay.push(key.ReadingTemp);
                     }, d);

@@ -4,7 +4,7 @@
     <div class="col-md-8 column text-center weatherbackground maintemprow">
         <h1>Current Temperature in my Bedroom</h1>
         <span class="loader" ng-hide="ctrl.loaded"><img src="assets/img/loader.gif" /></span>
-        <span class="temperature" ng-show="ctrl.loaded">{{ctrl.CurrentTemp | number:2}}</span>
+        <span class="temperature" ng-show="ctrl.loaded">{{ctrl.CurrentTemp | number:2}}&deg;</span>
         <p class="fahrenheit">Fahrenheit</p>
         <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>
     </div>
@@ -21,7 +21,7 @@
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
-            {{ctrl.HourAvg | number:2}}
+            {{ctrl.HourAvg | number:2}}&deg;
         </span>
     </div>
 
@@ -44,13 +44,14 @@
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
-            {{ctrl.DayAvg | number:2}}
+            {{ctrl.DayAvg | number:2}}&deg;
         </span>
     </div>
     </div>
     <div class="col-md-2 column">
     </div>
 </div>
+
 <!--{{ctrl.lastDayRaw}}
 <div id="chartContainer">
     <script type="text/javascript">
