@@ -1,7 +1,13 @@
+.linkertext {
+    text-align: center;
+    font-size: 120%;
+    color: blue;
+    font-weight: bold;
+}
+
 .maintemprow {
     margin-top: 150px;
 }
-
 
 .smalltemprow {
     margin-top: 10px;
@@ -28,7 +34,7 @@
     color: blue;
 }
 .fahrenheit {
-    color: #1a242f;
+    color: honeydew;
     font-size: 200%;
 }
 body {
