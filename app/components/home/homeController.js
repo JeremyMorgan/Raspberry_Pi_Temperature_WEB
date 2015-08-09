@@ -61,6 +61,7 @@
                 var daystart = asyncService.lastDay[0];
                 var dayend = asyncService.lastDay[1339];
 
+
                 angular.forEach(asyncService.lastDay, function(key, value){
                     daytotal = daytotal + key;
                 }, asyncService.lastDay);

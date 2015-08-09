@@ -51,6 +51,46 @@
     <div class="col-md-2 column">
     </div>
 </div>
+
+<div class="row clearfix smalltemprow">
+    <div class="col-md-2 column">
+    </div>
+    <div class="col-md-3 column text-center weatherbackground ">
+        <h2>Today's High:</h2>
+        <span class="loader" ng-hide="ctrl.loaded">
+            <img src="assets/img/loader.gif" />
+        </span>
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+            {{ctrl.HourAvg | number:2}}&deg;
+        </span>
+    </div>
+
+    <div class="col-md-2 column text-center weatherbackground " >
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+    <p>Daily Trend:</p>
+    <div ng-show="ctrl.hourcolder">
+        <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
+        <p>Getting Colder</p>
+    </div>
+    <div ng-show="ctrl.hourhotter">
+        <span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+        <p>Getting Warmer</p>
+    </div>
+        </span>
+    </div>
+    <div class="col-md-3 column text-center weatherbackground ">
+        <h2>Today's Low:</h2>
+        <span class="loader" ng-hide="ctrl.loaded">
+            <img src="assets/img/loader.gif" />
+        </span>
+        <span class="smalltemperature" ng-show="ctrl.loaded">
+            {{ctrl.DayAvg | number:2}}&deg;
+        </span>
+    </div>
+</div>
+<div class="col-md-2 column">
+</div>
+</div>
 <div class="row clearfix smalltemprow">
     <div class="col-md-12 column text-center">
         <a href="https://github.com/JeremyMorgan" class="linkertext">Check out some of my other projects</a>
