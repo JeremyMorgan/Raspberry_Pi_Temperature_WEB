@@ -51,7 +51,7 @@
     <div class="col-md-2 column">
     </div>
 </div>
-
+<!--------------- day high / low ------------------->
 <div class="row clearfix smalltemprow">
     <div class="col-md-2 column">
     </div>
@@ -61,7 +61,7 @@
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
-            {{ctrl.HourAvg | number:2}}&deg;
+            {{ctrl.dayHigh | number:2}}&deg;
         </span>
     </div>
 
@@ -84,7 +84,7 @@
             <img src="assets/img/loader.gif" />
         </span>
         <span class="smalltemperature" ng-show="ctrl.loaded">
-            {{ctrl.DayAvg | number:2}}&deg;
+            {{ctrl.dayLow | number:2}}&deg;
         </span>
     </div>
 </div>

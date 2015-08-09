@@ -27,8 +27,8 @@
             vm.DayAvg = "";
             vm.loaded = false;
             vm.lastDayRaw = asyncService.lastDayRaw;
-
-
+            vm.dayHigh = 0;
+            vm.dayLow = 0;
 
             // get our hero text
             asyncService.getCurrentTemp(APIHOST);
@@ -61,16 +61,31 @@
                 var daystart = asyncService.lastDay[0];
                 var dayend = asyncService.lastDay[1339];
 
-
                 angular.forEach(asyncService.lastDay, function(key, value){
                     daytotal = daytotal + key;
                 }, asyncService.lastDay);
 
-                //console.log(daystart);
-
+                // create averages
                 vm.HourAvg = (hourtotal / 60);
                 vm.DayAvg = (daytotal / 1440);
 
+                // calculate day high
+                angular.forEach(asyncService.lastDay, function(key, value){
+                    if (key > vm.dayHigh){
+                        vm.dayHigh = key;
+                    }
+                }, asyncService.lastDay);
+
+                // calculate day low
+                // TODO: make this since midnight instead of last 24 hours
+                vm.dayLow = vm.dayHigh;
+                angular.forEach(asyncService.lastDay, function(key, value){
+
+                    if (key <= vm.dayLow){
+                        vm.dayLow = key;
+                    }
+                    //console.log("Day low is " + vm.dayLow);
+                }, asyncService.lastDay);
 
                 if (hourstart >= hourend){
                     // trending colder
@@ -79,15 +94,12 @@
                     // trending hotter
                     vm.hourhotter = true;
                 }
-
                 vm.loaded = true;
-
             }, 1000);
 
             function reloadPage() {
                 $window.location.reload();
             }
-
             return vm;
         }
     ]);
