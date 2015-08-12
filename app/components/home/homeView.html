@@ -11,10 +11,10 @@
     <div class="col-md-2 column">
     </div>
 </div>
-
 <div class="row clearfix smalltemprow">
     <div class="col-md-2 column">
     </div>
+    
     <div class="col-md-3 column text-center weatherbackground ">
     <h2>Average Last Hour:</h2>
         <span class="loader" ng-hide="ctrl.loaded">
@@ -24,10 +24,10 @@
             {{ctrl.HourAvg | number:2}}&deg;
         </span>
     </div>
-
+    
     <div class="col-md-2 column text-center weatherbackground " >
         <span class="smalltemperature" ng-show="ctrl.loaded">
-    <p>Trend:</p>
+    <p>Hourly Trend:</p>
     <div ng-show="ctrl.hourcolder">
         <span class="glyphicon glyphicon-arrow-down" aria-hidden="true"></span>
         <p>Getting Colder</p>
@@ -88,6 +88,7 @@
         </span>
     </div>
 </div>
+
 <div class="col-md-2 column">
 </div>
 </div>
@@ -96,30 +97,3 @@
         <a href="https://github.com/JeremyMorgan" class="linkertext">Check out some of my other projects</a>
     </div>
 </div>
-
-
-
-
-
-
-
-<!--{{ctrl.lastDayRaw}}
-<div id="chartContainer">
-    <script type="text/javascript">
-        var svg = dimple.newSvg("#chartContainer", 590, 400);
-        d3.tsv(ctrl.lastDayRaw, function (data) {
-            data = dimple.filterData(data, "Owner", ["Aperture", "Black Mesa"])
-            var myChart = new dimple.chart(svg, data);
-            myChart.setBounds(60, 30, 505, 305);
-            var x = myChart.addCategoryAxis("x", "Month");
-            x.addOrderRule("Date");
-            myChart.addMeasureAxis("y", "Unit Sales");
-            var s = myChart.addSeries("Channel", dimple.plot.area);
-            s.interpolation = "cardinal";
-            myChart.addLegend(60, 10, 500, 20, "right");
-            myChart.draw();
-        });
-    </script>
-</div>-->
-
-
