@@ -94,6 +94,13 @@
                     // trending hotter
                     vm.hourhotter = true;
                 }
+                if (daystart >= dayend){
+                    // trending colder
+                    vm.daycolder = true;
+                }else {
+                    // trending hotter
+                    vm.dayhotter = true;
+                }
                 vm.loaded = true;
             }, 1000);
 

@@ -4,7 +4,6 @@
  * https://github.com/angular-ui/ui-router/wiki
  */
 
-
 angularKickstartApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 
     // any unknown URLS go to 404
