@@ -4,9 +4,13 @@
     <div class="col-md-8 column text-center weatherbackground maintemprow">
         <h1>Current Temperature in my Bedroom</h1>
         <span class="loader" ng-hide="ctrl.loaded"><img src="assets/img/loader.gif" /></span>
-        <span class="temperature" ng-show="ctrl.loaded">{{ctrl.CurrentTemp | number:2}}&deg;</span>
-        <p class="fahrenheit">Fahrenheit</p>
-        <p class="fahrenheit">{{ctrl.CurrentTempCelcius | number:2}}&deg; Celcius </p>
+
+        <span class="temperature" ng-show="ctrl.loaded">  
+            <div class="tempbigvalue">{{ctrl.CurrentTemp | number:2}} <sup>&deg;F</sup></div>                  
+        </span>
+        <span class="temperature" ng-show="ctrl.loaded">
+        <p class="tempsmallvalue">{{ctrl.CurrentTempCelcius | number:2}}<sup>&deg; C</sup></p>
+        </span>
         <p> {{ctrl.CurrentHumidity | number:2}}% Humidity</p>
         <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>
     </div>

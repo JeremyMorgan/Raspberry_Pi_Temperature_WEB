@@ -14,13 +14,31 @@
 }
 
 .temperature{
-    font-size: 1250%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tempbigvalue {
+    font-size: 1000%;
     color: honeydew;
 }
+.tempbigvalue sup {
+    font-size: 25%;
+    color: #686868;
+    vertical-align: super;    
+}
+.tempsmallvalue {
+    font-size: 500%;
+    color: honeydew;
+}
+.tempsmallvalue sup {
+    font-size: 40%;
+    color: #686868;
+    vertical-align: super;    
+}
+
 .smalltemperature{
     font-size: 400%;
     color: honeydew;
-
 }
 .smalltemperature p{
     margin-top:1px;
