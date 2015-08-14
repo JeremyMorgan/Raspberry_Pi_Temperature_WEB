@@ -12,6 +12,7 @@
                 lastHour: [],
                 lastDay: [],
                 lastDayRaw: [],
+                lastHourHumidity: [],
                 getCurrentTemp : getCurrentTemp,
                 getLastHour : getLastHour,
                 getLastDay : getLastDay,
@@ -45,7 +46,8 @@
             function getLastHour(APIHOST) {
                 sendRequest.async('https://bedroomtemp.azurewebsites.net/api/status?count=60&sortorder=DESC').then( function(d) {
                     angular.forEach(d, function(key, value){
-                        factory.lastHour.push(key.ReadingTemp);
+                        factory.lastHour.push(key.TempFahrenheit);
+                        factory.lastHourHumidity.push(key.Humidity);
                     }, d);
                 });
             }
@@ -54,7 +56,7 @@
                 sendRequest.async('https://bedroomtemp.azurewebsites.net/api/status?count=1440&sortorder=DESC').then( function(d) {
                     //factory.lastDayRaw.push(d);
                     angular.forEach(d, function(key, value){
-                        factory.lastDay.push(key.ReadingTemp);
+                        factory.lastDay.push(key.TempFahrenheit);
                     }, d);
                 });
             }

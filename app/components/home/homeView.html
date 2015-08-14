@@ -9,10 +9,13 @@
             <div class="tempbigvalue">{{ctrl.CurrentTemp | number:2}} <sup>&deg;F</sup></div>                  
         </span>
         <span class="temperature" ng-show="ctrl.loaded">
-        <div class="tempsmallvalue">{{ctrl.CurrentTempCelcius | number:2}}<sup>&deg; C</sup></div>
+        <div class="tempsmallvalue">{{ctrl.CurrentTempCelcius | number:0}}<sup>&deg; C</sup></div>
         </span>
         <span class="temperature" ng-show="ctrl.loaded">
-        <div class="humidity">Humidity: {{ctrl.CurrentHumidity | number:2}}<sup>%</sup> </div>
+        <div class="humidity">Humidity: {{ctrl.CurrentHumidity | number:0}}<sup>%</sup> 
+        <span ng-show="ctrl.humrising">and rising</span>
+        <span ng-show="ctrl.humdropping">and dropping</span>
+        </div>
         </span>
         <br />
         <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>

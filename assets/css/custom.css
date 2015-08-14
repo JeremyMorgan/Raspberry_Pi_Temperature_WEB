@@ -38,6 +38,10 @@
 .humidity {
     font-size: 200%;
 }
+.humidity sup{
+    font-size: 50%;
+    color: #686868;
+}
 .smalltemperature{
     font-size: 400%;
     color: honeydew;

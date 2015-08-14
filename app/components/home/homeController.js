@@ -32,13 +32,15 @@
             vm.dayHigh = 0;
             vm.dayLow = 0;
 
+            vm.humidityHourAvg = 0;
+
             // get our hero text
             asyncService.getCurrentTemp(APIHOST);
             asyncService.getLastHour(APIHOST);
             asyncService.getLastDay(APIHOST);
 
             $timeout( function() {
-                console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
+                //console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
                 //console.log("Showing: " + asyncService.retrievedData[0].TimeStamp);
                 //console.log("Showing: " + JSON.stringify(asyncService.lastHour));
 
@@ -48,9 +50,9 @@
                 vm.CurrentHumidity = asyncService.retrievedData[0].Humidity;
 
                 //vm.HourAvg = asyncService.lastHour;
+                //console.log(JSON.Stringify(asyncService.lastHour);
 
-
-                // calculate hour average
+                // calculate hour average F
                 var hourtotal = 0;
                 var hourstart = asyncService.lastHour[0];
                 var hourend = asyncService.lastHour[59];
@@ -61,7 +63,18 @@
 
                 vm.HourAvg = (hourtotal / 60);
 
-                // calculate day average
+                // calculate hour average humidity
+                var hourHumidityTotal = 0;
+                var hourHumidityStart = asyncService.lastHourHumidity[0];
+                var hourHumidityEnd = asyncService.lastHourHumidity[59];
+ 
+                angular.forEach(asyncService.lastHourHumidity, function(key, value){
+                    hourHumidityTotal = hourHumidityTotal + key;
+                }, asyncService.hourHumidityTotal);
+
+                vm.humidityHourAvg = (hourHumidityTotal / 60);
+
+                // calculate day average F
                 var daytotal = 0;
                 var daystart = asyncService.lastDay[0];
                 var dayend = asyncService.lastDay[1339];
@@ -70,18 +83,18 @@
                     daytotal = daytotal + key;
                 }, asyncService.lastDay);
 
-                // create averages
+                // create averages F
                 vm.HourAvg = (hourtotal / 60);
                 vm.DayAvg = (daytotal / 1440);
 
-                // calculate day high
+                // calculate day high F
                 angular.forEach(asyncService.lastDay, function(key, value){
                     if (key > vm.dayHigh){
                         vm.dayHigh = key;
                     }
                 }, asyncService.lastDay);
 
-                // calculate day low
+                // calculate day low F
                 // TODO: make this since midnight instead of last 24 hours
                 vm.dayLow = vm.dayHigh;
                 angular.forEach(asyncService.lastDay, function(key, value){
@@ -106,6 +119,19 @@
                     // trending hotter
                     vm.dayhotter = true;
                 }
+
+                console.log("Current: " + vm.CurrentHumidity);
+                console.log("Average: " + vm.humidityHourAvg);
+                
+                if (vm.humidityHourAvg < vm.CurrentHumidity){
+                    
+                    vm.humrising = true;
+                    vm.humdropping = false;
+                }else {
+                    vm.humrising = false;
+                    vm.humdropping = true;
+                }
+
                 vm.loaded = true;
             }, 1000);
 
