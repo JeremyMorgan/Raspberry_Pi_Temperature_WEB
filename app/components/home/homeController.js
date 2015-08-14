@@ -23,6 +23,8 @@
             vm.APIHost = APIHOST;
             vm.CurrentTemp = "Fetching..";
             vm.CurrentTime = "";
+            vm.CurrentTempCelcius = "";
+            vm.CurrentHumidity = ""
             vm.HourAvg = "";
             vm.DayAvg = "";
             vm.loaded = false;
@@ -36,12 +38,15 @@
             asyncService.getLastDay(APIHOST);
 
             $timeout( function() {
-                //console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
-                //console.log("Showing: " + asyncService.retrievedData[0].ReadingTime);
+                console.log("Temp: " + JSON.stringify(asyncService.retrievedData));
+                //console.log("Showing: " + asyncService.retrievedData[0].TimeStamp);
                 //console.log("Showing: " + JSON.stringify(asyncService.lastHour));
 
-                vm.CurrentTemp = asyncService.retrievedData[0].ReadingTemp;
-                vm.CurrentTime = asyncService.retrievedData[0].ReadingTime;
+                vm.CurrentTemp = asyncService.retrievedData[0].TempFahrenheit;
+                vm.CurrentTime = asyncService.retrievedData[0].TimeStamp;
+                vm.CurrentTempCelcius = asyncService.retrievedData[0].TempCelcius;
+                vm.CurrentHumidity = asyncService.retrievedData[0].Humidity;
+
                 //vm.HourAvg = asyncService.lastHour;
 
 

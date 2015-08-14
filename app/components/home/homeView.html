@@ -6,6 +6,8 @@
         <span class="loader" ng-hide="ctrl.loaded"><img src="assets/img/loader.gif" /></span>
         <span class="temperature" ng-show="ctrl.loaded">{{ctrl.CurrentTemp | number:2}}&deg;</span>
         <p class="fahrenheit">Fahrenheit</p>
+        <p class="fahrenheit">{{ctrl.CurrentTempCelcius | number:2}}&deg; Celcius </p>
+        <p> {{ctrl.CurrentHumidity | number:2}}% Humidity</p>
         <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>
     </div>
     <div class="col-md-2 column">
