@@ -35,7 +35,9 @@
     color: #686868;
     vertical-align: super;    
 }
-
+.humidity {
+    font-size: 200%;
+}
 .smalltemperature{
     font-size: 400%;
     color: honeydew;

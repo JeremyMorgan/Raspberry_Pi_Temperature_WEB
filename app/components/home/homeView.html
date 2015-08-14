@@ -9,9 +9,12 @@
             <div class="tempbigvalue">{{ctrl.CurrentTemp | number:2}} <sup>&deg;F</sup></div>                  
         </span>
         <span class="temperature" ng-show="ctrl.loaded">
-        <p class="tempsmallvalue">{{ctrl.CurrentTempCelcius | number:2}}<sup>&deg; C</sup></p>
+        <div class="tempsmallvalue">{{ctrl.CurrentTempCelcius | number:2}}<sup>&deg; C</sup></div>
         </span>
-        <p> {{ctrl.CurrentHumidity | number:2}}% Humidity</p>
+        <span class="temperature" ng-show="ctrl.loaded">
+        <div class="humidity">Humidity: {{ctrl.CurrentHumidity | number:2}}<sup>%</sup> </div>
+        </span>
+        <br />
         <p>Last Reading: {{ctrl.CurrentTime | date:'medium'}} </p>
     </div>
     <div class="col-md-2 column">
